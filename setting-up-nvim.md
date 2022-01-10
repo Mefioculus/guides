@@ -19,9 +19,9 @@ sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake c
 git clone https://github.com/neovim/neovim
 
 
+git checkout stable #(Опционально) для перехода на стабильную ветку (выполнить перед сборкой)
 cd neovim && make CMAKE_BUILD_TYPE = RelWithDebInfo # Данная команда производит сборку проекта
 # Стоит учесть, что если не присвоить переменной CMAKE_BUILD_TYPE, поставится Debug версия сборки, которая подтормаживает
-git checkout stable #(Опционально) для перехода на стабильную ветку (выполнить перед сборкой)
 sudo make install # сборка проекта
 ```
 
@@ -97,6 +97,12 @@ git clone https://github.com/mefioculus/configs_and_scripts
 
 ```bash
 dotnet tool install --global csharp-ls
+```
+
+Если установка производится для старой версии, может возникнуть ошибка. В таком случае нужно поставить более старую версию csharp-ls:
+
+```bash
+dotnet tool install --global csharp-ls --version 0.1.5
 ```
 
 После установки приложение напишет, что для того, чтобы использовать данные инструменты, нужно будет дополнительно в переменную окружения дописать путь ~/.dotnet/tools
