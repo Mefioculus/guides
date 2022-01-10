@@ -19,8 +19,8 @@ sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake c
 git clone https://github.com/neovim/neovim
 
 
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo # Данная команда производит сборку проекта
 git checkout stable #(Опционально) для перехода на стабильную ветку (выполнить перед сборкой)
-cd neovim && make CMAKE_BUILD_TYPE = RelWithDebInfo # Данная команда производит сборку проекта
 # Стоит учесть, что если не присвоить переменной CMAKE_BUILD_TYPE, поставится Debug версия сборки, которая подтормаживает
 sudo make install # сборка проекта
 ```
