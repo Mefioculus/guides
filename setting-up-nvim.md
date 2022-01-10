@@ -61,6 +61,12 @@ bash dotnet-install.sh # так же устанавливаем последню
 export PATH=$PATH:$HOME/.dotnet
 export DOTNET_ROOT=$HOME/.dotnet
 ```
+Данные операции в fish будут отличаться, так как там не нужно будет править конфигурационный файл, а нужно будет ввести следующие команды:
+```
+set -U fish_user_paths $HOME/.dotnet $fish_user_paths
+set -xU DOTNET_ROOT $HOME/.dotnet/
+```
+
 
 После чего выйти из файла и произвести из него чтение (или просто перезагрузить систему - тогда чтение файла произойдет автоматически при запуске)
 
@@ -99,6 +105,10 @@ dotnet tool install --global csharp-ls
 
 ```bash
 export PATH=$PATH:$HOME/.dotnet/tools
+```
+Для fish
+```bash
+set -U fish_user_paths $HOME/.dotnet/tools/ $fish_user_paths
 ```
 
 и после этого source'им файл для обновления переменной в текущей сессии.
