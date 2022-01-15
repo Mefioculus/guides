@@ -14,7 +14,7 @@
 public static void CompressPdf(string targetPath) {
 
     using (var stream = new MemoryStream(File.ReadAllBytes(targetPath)) { Position = 0 } )
-    using (var source = PdfReader.Open(stream, PdfDocumentOpenMode.Imort))
+    using (var source = PdfReader.Open(stream, PdfDocumentOpenMode.Import))
     using (var document = new PdfDocument()) {
 
         var options = document.Options;
