@@ -7,8 +7,8 @@
 Главная проблема, с которой я столкнулся, когда начал искать решение в интернете - оказалось, что многие из подобных библиотек распространяются по лицензии, которая не позволила бы мне использовать их в своей работе.
 Но все же удалось на **StackOverlow** найти пост с библиотекой, которая распространяется по **MIT** лицензии (и так же в том ответе присутствовал пример кода, который сразу можно было бы переложить в мой макрос для пробы.
 
-[Ссылка на полезный ответ на StackOverlow](https://stackoverflow.com/a/57386379)
-[PdfSharp](http://www.pdfsharp.net/?AspxAutoDetectCookieSupport=1)
+- [Ссылка на полезный ответ на StackOverlow](https://stackoverflow.com/a/57386379)
+- [PdfSharp](http://www.pdfsharp.net/)
 
 ```csharp
 public static void CompressPdf(string targetPath) {
