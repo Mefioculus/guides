@@ -63,11 +63,9 @@ curl cheat.sh/gs
 using System.Diagnostics;
 
 Process iStartProcess = new Process(); // Новый процесс
-iStartProcess.StartInfo.FileName = @"C:\program.exe"; / Путь к исполняемому файлу
-iStartProcess.StartInfo.Arguments = " -i 192.198.10.12 -p 10568"
-// Эта строка указывается , если программа запускается с параметрами
-iStartProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden; // Это строку указываем,
-//если хотим запустить программу в скрытом виде
+iStartProcess.StartInfo.FileName = @"C:\program.exe"; // Путь к исполняемому файлу
+iStartProcess.StartInfo.Arguments = " -i 192.198.10.12 -p 10568"; // Эта строка указывается , если программа запускается с параметрами
+iStartProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden; // Это строку указываем, если хотим запустить программу в скрытом виде
 iStartProcess.StartInfo.WorkingDirectory = @"Path/To/Working/Directory"; // В том примере данный параметр не был задан
 // Но в комментариях было сказано, что не все приложения смогут так запуститься
 iStartProcess.Start(); // Запускаем программу
