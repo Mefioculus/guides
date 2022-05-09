@@ -187,14 +187,12 @@ tar xvzf path/to/arcive.tar.gz
 Для **Linux** предложен простой вариант, как можно установить сервер:
 
 ```bash
-mkdir -p ~/.local/bin
-curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.cargo/bin/rust-analyzer
 chmod +x ~/.local/bin/rust-analyzer
 ```
 
-Помимо этого нужно будет убедиться, что требуемый путь прописан в переменной среды **linux**.
-В статье предлагается добавить путь `~/.local/bin`, правда так же в статье сказано, что если уже добавлен путь `~/.cargo/bin` или `usr/local/bin`, все должно работать.
-Так что по хорошему этот вариант мне так же нужно будет проверить.
+Так как скачать rust-analyzer можно в любое расположение, для того, чтобы не пришлось добавлять еще один путь в переменную среды я в командах выше использовал путь, по которому расположены все утилиты **rust**.
+В гайде же там был прописан путь `~./local/bin/` (правда в том же гайде после сказано, что использовать можно и другие подходящие пути).
 
 Так же в дополнении в статье сказано, что rust-analyzer нуждается в источниках стандартных библиотек, и если их нет, то он попробует поставить их сам. Но так же можно произвести установку вручную командой:
 
@@ -212,7 +210,7 @@ rustup component add rust-src
 require'lspconfig'.rust_analyzer.setup{}
 ```
 
-Правда для того, чтобы произвести корректную настройку, скорее всего придется использовать следующее:
+Правда, можно передать в сервер дополнительные настройки:
 
 ```
 lua << EOF
