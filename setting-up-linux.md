@@ -38,10 +38,24 @@ sudo apt install exa
 
 - [Репозиторий проекта](https://github.com/ajeetdsouza/zoxide)
 
+```bash
+sudo apt install zoxide
+```
+
+Правда, после установки его нужно будет сконфигурировать.
+Для bash это можно сделать следующим способом:
+```bash
+eval "$(zoxide init bash)"
+```
+Для fish это можно нужно будет дописать в конец конфиг файла `config.fish`
+```bash
+zoxide init fish | source
+```
 
 # Fish 
 
 - [Репозиторий проекта](https://github.com/fish-shell/fish-shell)
+- [Репозиторий omf](https://github.com/oh-my-fish/oh-my-fish)
 
 C **fish** последовательность действий более сложная, так как помимо его установки так же потребуется его настроить.
 
@@ -49,16 +63,38 @@ C **fish** последовательность действий более сл
 
 ```bash
 sudo apt install fish
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+
 ```
 
 2. Конфигурирование
 
+Установка темы через **oh-my-fish**
+
+```bash
+omf install simple-ass-prompt
+```
+
 Для конфигурации можно воспользоваться моим конфигом, который нужно будет расположить в директории `~/.config/fish/config.fish`.
+
 Так же в нем нужно будет включить vi mode, для того, чтобы можно было пользоваться сочетаниями клавиш **vim**
 
 ```bash
 fish_vi_key_bindings
 ```
+
+3. Настройка псевдонимов
+
+- Установить псевдоним для **exa** на ls
+- Установить neofetch на старт шелла
+- Прописать старт zoxide в fish
+
+4. Установка шелла по умолчанию
+
+```bash
+chsh -s $(which fish)
+```
+
 
 # Dotnet
 # Neovim
