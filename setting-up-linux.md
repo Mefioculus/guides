@@ -138,8 +138,20 @@ chsh -s $(which fish)
 
 
 # Dotnet
+
+По установке **dotnet** в линукс у меня уже есть подробный гайд, который расписан в гайде по настойке **neovim**
+
+- [Гайд по установке](https://github.com/Mefioculus/guides/blob/master/setting-up-nvim.md)
+
 # Neovim
 
-- [Репозиторий проекта]()
+- [Репозиторий проекта](https://github.com/neovim/neovim)
+- [Гайд по установке](https://github.com/Mefioculus/guides/blob/master/setting-up-nvim.md)
 
 # Rust
+
+По установке **rust** в линукс у меня уже есть подробный гайд, который расписан в гайде по настойке **neovim**
+
+- [Гайд по установке](https://github.com/Mefioculus/guides/blob/master/setting-up-nvim.md)
+
+
