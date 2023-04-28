@@ -95,7 +95,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 Но так как я пользуюсь терминалом **fish**, то я это делаю следующей командой:
 
 ```bash
-set -U fish_user_paths $HOME/.cargo/bin fish_user_paths
+set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
 ```
 
 Все, после этого все необходимое для функционирования **Rust** установлено на машине
